@@ -7,9 +7,14 @@
 
 <script>
 export default {
+    methods: {
+        getToday: function () {
+            return new Date();
+        }
+    },
     computed: {
         isBirthday: function () {
-            const date = new Date();
+            const date = this.getToday();
             return date.getMonth() === 3 && date.getDate() === 9;
         }
     }
